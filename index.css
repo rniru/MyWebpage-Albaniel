@@ -1,0 +1,415 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f6f3;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+.mediaContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+    margin-bottom: 0;
+}
+.video {
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    z-index: 10;
+    margin-right: -8%;
+    margin-top: -50px;
+}
+
+.introduction {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    color: #2f3e2a;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+.subtitle {
+    font-size: 20px;
+    color: #6a6a6a;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.navBackground {
+    background: linear-gradient(to right, #2f3e2a, #4a5a3e, #2f3e2a);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 45px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    height: 200%;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.Button {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    min-width: 130px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.Button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.Button.active {
+    background-color: rgba(47, 62, 38, 0.982);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+
+.Button.active:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+.shape {
+    width: 100%;
+    height: 140px;
+    background-color: #4f634c;
+    border: none;
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.toggleCheckbox:checked ~ .shape {
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+    border-radius: 0;
+}
+
+.aboutContent {
+    padding-top: 40px;
+    max-height: 5000px;
+    overflow-y: auto;
+}
+.video {
+    width: 43%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background-color: black;
+    z-index: 2;
+    margin-right: -10%;
+    margin-top: -125px;
+}
+.picture img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 25%;
+    margin-top: -140px;
+    position: relative;
+    z-index: 1;
+}
+.toggleCheckbox {
+    display: none;
+}
+
+.shape {
+    width: 100%;
+    height: 140px;
+    background-color: #4f634c;
+    border: none;
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.toggleCheckbox:checked ~ .shape {
+    height: 100vh;
+    border-radius: 0;
+}
+
+.aboutButton {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.toggleCheckbox:checked ~ .shape .aboutButton {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.aboutContent {
+    opacity: 0;
+    visibility: hidden;
+    padding: 150px;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.toggleCheckbox:checked ~ .shape .aboutContent {
+    opacity: 1;
+    visibility: visible;
+}
+.aboutContent {
+    opacity: 0;
+    visibility: hidden;
+    padding: 80px;
+    padding-top: 150px;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: left;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.aboutContent h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aboutContent p {
+    font-size: 22px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.toggleCheckbox:checked ~ .shape .aboutContent {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.downButton {
+    position: fixed;
+    right: 50px;
+    top: 120px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.toggleCheckbox:checked ~ .shape .downButton {
+    opacity: 1;
+    visibility: visible;
+}
+
+.downButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.aboutButton {
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.aboutButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.aboutButton i {
+    font-size: 20px;
+}
+.line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8C8159, transparent);
+    border: none;
+    margin: 25px auto;
+    opacity: 0.5;
+}
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 1400px;
+    padding-left: 5%;
+    margin-top: -45px;
+    gap: 2px;
+}
+.introduction h3 {
+    font-family: 'Garamond', sans-serif;
+    margin-bottom: -20px;
+    font-size: 40px;
+    color: #5c7066;
+}
+
+.introduction h2 {
+    margin-top: -3px;
+    margin-bottom: -20px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: left;}
+.toggleCheckbox:checked ~ .video,
+.toggleCheckbox:checked ~ .picture {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.video,
+.picture {
+    transition: all 0.3s ease;
+}
+
+.shape {
+    width: 100%;
+    height: 140px;
+    background-color: #4f634c;
+    border: none;
+    border-top-left-radius: 65px;
+    border-top-right-radius: 65px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.toggleCheckbox:checked ~ .shape {
+    height: 100vh;
+    border-radius: 0;
+}
+.badge {
+    display: inline-flex;
+    background-color: #98b4a6;
+    color: #2f3e2a;
+    padding: 5px 25px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #2f3e2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -15%;
+    right: 43%;
+    transform: rotate(5deg);
+    z-index: 10;
+    width: 180px;
+    height: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftShape, .rightShape {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(1.2);
+}
+.shine {
+    position: absolute;
+    top: -25%;
+    right: 28%;
+    z-index: 5;
+    width: 10%;
+    height: 39%;
+    transform: rotate(-19deg);
+    transition: all 0.3s ease;
+}
+.sparkle {
+    position: absolute;
+    top: -22%;
+    right: 13%;
+    z-index: 5;
+    width: 5%;
+    height: 20%;
+    transform: rotate(10deg);
+    transition: all 0.3s ease;
+}
+.shine img, .sparkle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.toggleCheckbox:checked ~ .badge,
+.toggleCheckbox:checked ~ .shine,
+.toggleCheckbox:checked ~ .sparkle {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.badge, .shine, .sparkle {
+    transition: all 0.3s ease;
+}
+.toggleCheckbox:checked ~ .shape {
+    z-index: 100;
+}
+

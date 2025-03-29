@@ -1,0 +1,185 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: #f8f6f3;
+    color: #59705b;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    color: #2f3e2a;
+    font-weight: 600;
+    margin: 110px auto 20px;
+    text-align: center;
+}
+.line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8C8159, transparent);
+    border: none;
+    margin: 25px auto 10px;
+    opacity: 0.5;
+}
+.navBackground {
+    background: linear-gradient(to right, #2f3e2a, #4a5a3e, #2f3e2a);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+.Button {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    min-width: 120px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+.Button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.Button.active {
+    background-color: rgba(47, 62, 38, 0.982);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+.Button.active:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+.buttomButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px auto 20px auto;
+}
+.buttomButton {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    background-color: #536232;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    border: 3px solid #3d4826;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out;
+}
+.buttomButton:hover {
+    background-color: #2d3d2a;
+    border-color: #1f2b17;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
+.musicContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.musicCategory {
+    flex: 1;
+    background: #5a755e;
+    padding: 30px;
+    width: 40%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(89, 112, 91, 0.15);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.musicCategory h2 {
+    color: #ffffff;
+    font-family: 'Poppins', serif;
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.songItem {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(89, 112, 91, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+.songItem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(89, 112, 91, 0.15);
+}
+.songPoster {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.songItem h3 {
+    color: #4e6350;
+    font-size: 22px;
+    margin: 15px 0;
+}
+.songItem p {
+    color: #8C8159;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+audio {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+audio::-webkit-media-controls-panel {
+    background: linear-gradient(to right, #98b4a6, #d1e4d1);
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    background-color: #59705b;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-timeline {
+    background-color: #d1e4d1;
+    border-radius: 10px;
+    height: 4px;
+}
