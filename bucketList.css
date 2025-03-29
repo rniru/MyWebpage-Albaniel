@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 h1 {
     font-family: Georgia, serif;
     font-size: 70px;
@@ -15,7 +14,6 @@ h1 {
     margin: 110px auto 20px;
     text-align: center;
 }
-
 .line {
     width: 100%;
     height: 3px;
@@ -24,62 +22,73 @@ h1 {
     margin: 10px auto;
     opacity: 0.5;
 }
-
 .bucketlist-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
     max-width: 1200px;
-    margin: 10px auto;
-    padding: 20px;
+    margin: 0 auto;
 }
-
 .bucket-section {
-    background: #8cae8c;
-    margin: 30px 0;
-    padding: 30px;
+    flex: 1;
+    background: #faf8f5;
+    padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.bucket-section h2 {
-    color: #2f3e2a;
-    font-size: 35px;
-    margin-bottom: 20px;
-    font-family: Georgia, serif;
-    padding-bottom: 5px;
-    display: inline-block;
-}
-
-.bucket-item {
-    background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    text-align: left;
+    border: 1px solid #8C8159;
 }
-
+.bucket-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2f3e2a;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.bucket-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #536232;
+    border-radius: 2px;
+}
+.bucket-item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(140, 129, 89, 0.2);
+}
 .bucket-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: #faf8f5;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .bucket-item i {
-    font-size: 30px;
-    color: #4b683b;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #536232;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
 }
-
 .bucket-item h3 {
     color: #2f3e2a;
-    font-size: 24px;
-    margin: 10px 0;
-    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
-
 .bucket-item p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 16px;
+    color: #4a5a3e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
 }
 .buttomButtons {
     display: flex;
